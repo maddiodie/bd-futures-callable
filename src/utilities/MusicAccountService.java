@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MusicAccountService {
 
-    private Map<String, AmazonMusicAccount> accounts;
+    private static Map<String, AmazonMusicAccount> accounts;
 
     /**
      * Constructor for MusicAccountService.
@@ -24,8 +24,9 @@ public class MusicAccountService {
      * @param accountID ID of account to return.
      * @return AmazonMusicAccount of the account.
      */
-    public AmazonMusicAccount getAccount(String accountID) {
+    public static AmazonMusicAccount getAccount(String accountID) {
         return accounts.get(accountID);
     }
+
 }
 
